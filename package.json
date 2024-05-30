@@ -12,6 +12,7 @@
   "author": "Geovanny Gómez Arciniegas",
   "license": "ISC",
   "dependencies": {
+    "@vercel/postgres": "^0.8.0",
     "express": "^4.19.2",
     "morgan": "^1.10.0",
     "pg": "^8.11.5"
