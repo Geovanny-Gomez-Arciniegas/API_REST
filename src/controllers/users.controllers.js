@@ -80,9 +80,9 @@ export const updateUser = async (req, res) => {
     const { rows } = await pool.query('UPDATE users SET name = $1, email = $2 WHERE id = $3 RETURNING *', [data.name, data.email, id]);
   // Tener en cuenta evaluar si el usuario no existe
     if (rows.length === 0) {
-      return res.status(404).json(`El Usuario con id: ${id} no se a encontrado`);
+      return res.status(404).json({ message: `El usuario con el id: ${id} no se ha encontrado` });
     }
-
+    
     return res.json(rows[0]);
 
 
